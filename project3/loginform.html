@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Joshie Cellphone Shop</title>
+        <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container-10{
+            width: 100%;
+            height: 100vh;
+            font-family: sans-serif;
+            background: rgb(187,187,245);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card {
+            width: 350px;
+            height: 500px;
+            box-shadow: 0 0 40px 20px rgba (0,0,0,0,26);
+        }
+        .inner-box{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .card-front, .card-back{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            background-image: linear-gradient(rgba(0,0,100,0.8)), url(images/iphone1.jpg);
+            padding: 55px;
+            box-sizing: border-box;
+            backface-visibility: hidden;
+        }
+        .card-back{
+            transform: rotateY(180deg);
+        }
+
+        </style>
+    </head>
+    <body>
+        <div class ="container-10">
+            <div class = "card">
+                <div class = "inner-box">
+                    <div class = "card-front"></div>
+                    <div class = "card-back"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

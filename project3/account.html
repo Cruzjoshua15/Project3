@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset ="UTF-8">
+        <title>All Products - Joshua Aquatic Zone</title>
+        <link rel = "stylesheet" href="site.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,100;1,300&display=swap" rel="stylesheet">
+        <link rel ="stylesheet" href = "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+    </head>
+    <body>
+
+        <div class ="container">
+            <div class ="navbar">
+                <div class = "logo">
+                    <img src ="images/phone-icon3.png" width ="60px">
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li> <a href = "home.html" >Home</a>   </li>
+                        <li> <a href = "site.html" >Products</a>   </li>
+                        <li> <a href = "" >About</a>   </li>
+                        <li> <a href = "" >Contact</a>   </li>
+                        <li> <a href = "account.html" >Account</a>   </li>
+                    </ul>
+                </nav>
+                <a href = "site.html"><img src ="Images/cart.jpg" width ="30px" height ="30px"></a> 
+        </div>
+      </div>
+
+      <!---------Account Page--------->
+      <div class ="account-page">
+          <div class ="container">
+              <div class="row">
+                  <div class ="col-2">
+                      <img src ="images/oppA5s.jpg" width ="100%">
+                  </div>
+                  <div class ="col-2">
+                    <div class ="form-container">
+                        <div class = "formbtn">
+                            <span onclick ="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id ="indicator">
+                        </div>
+                        <form  id ="loginform">
+                            <input type ="text" placeholder="Username" id = "email">
+                            <input type ="password" placeholder="Password" id = "pwd1">
+                            <button type ="submit" class ="btn"><a href = "home.html">Login</a></button>
+                            <a href ="">Forgot Password</a>
+                        </form>
+
+                        <form id = "regform">
+                            <input type ="text" placeholder="Username">
+                            <input type ="email" placeholder="email">
+                            <input type ="password" placeholder="Password">
+                            <button type ="submit" class ="btn">Register</button>
+                        </form>
+
+                    </div>
+                </div>
+              </div>
+          </div>
+      </div>
+
+<!--------Footer------->
+
+<footer>
+    <p id="footer-title">our support team</p>
+    <div class="footer">
+        <div class="support">
+            <ul>
+                <h3>Know About Us</h3>
+                <li><a href="#" id="about">Know Us</a></li>
+                <li><a href="#" id="Refund-policy">Refund Policy</a></li>
+                <li><a href="#" id="policy">Our Policy</a></li>
+                <li><a href="#" id="return-product">How to Return ?</a></li>
+                <li><a href="#" id="terms">Term & Conditios</a></li>
+                <li><a href="#" id="privacy">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="social-media">
+
+            <ul>
+                <h3>Contact Us</h3>
+                <li><i class="fa fa-facebook"></i><a href="#" id="facebook">Facebook</a></li>
+                <li><i class="fa fa-twitter"></i><a href="#" id="twitter">Twitter</a></li>
+                <li><i class="fa fa-instagram"></i><a href="#" id="Instagram">Instagram</a></li>
+                <li><i class="fa fa-telegram"></i><a href="#" id="telegram">Telegram</a></li>
+            </ul>
+        </div>
+
+        <div class="address">
+            <h3>Address</h3>
+            <p> Bustos, Bulacan ,</p>
+            <p>474 Bonga Menor,</p>
+            <p>Phone No : 09950068530</p>
+        </div>
+    </div>
+
+    <div id="copyright">
+        <p>Project IT-310 2022</p>
+    </div>
+</footer>
+<!----JS for Toggle Menu---->
+
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight="0px";
+    
+    function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight ="200px";  
+        }
+        else {
+            MenuItems.style.maxHeight ="0px";
+        }
+    }
+</script>
+
+<!-----Js for Toggle Form----->
+<script>
+
+    var loginform = document.getElementById("loginform")
+    var regform = document.getElementById("regform")
+    var indicator = document.getElementById("indicator")
+        function register(){
+    
+            regform.style.transform = "translateX(0px)";
+            loginform.style.transform = "translateX(0px)";
+            indicator.style.transform = "translateX(100px)";
+    
+        }
+        function login(){
+            
+            regform.style.transform = "translateX(300px)";
+            loginform.style.transform = "translateX(300px)";
+            indicator.style.transform = "translateX(0px)";
+        }
+    
+    </script>
+
+
+
+</body>
+</html> 
